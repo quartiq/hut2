@@ -18,7 +18,7 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            # "aqctl_hut2 = hut2.aqctl_hut2:main",
+            "aqctl_hut2 = hut2.aqctl_hut2:main",
         ],
     },
     test_suite="hut2.test",

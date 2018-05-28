@@ -112,6 +112,27 @@ class HUT2(asyncio.DatagramProtocol):
         for r in read:
             r.set_result(self.status)
 
+    async def get_port_states(self):
+        """Return current relay states as a list.
+
+        :return: List of eight integers
+        """
+        return (await self.get_status()).port_states
+
+    async def get_io_states(self):
+        """Return current IO states as a list.
+
+        :return: List of eight integers
+        """
+        return (await self.get_status()).io_states
+
+    async def get_temp(self):
+        """Return current temperature.
+
+        :return: Temperature in C
+        """
+        return (await self.get_status()).temp
+
     def __enter__(self):
         return self
 
