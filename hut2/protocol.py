@@ -131,7 +131,7 @@ class HUT2(asyncio.DatagramProtocol):
         self.transport.sendto(cmd + b"\r\n")
 
     def wait(self):
-        """Get a new status message.
+        """Return a new status message.
 
         This returns a future.
 
@@ -144,7 +144,8 @@ class HUT2(asyncio.DatagramProtocol):
     async def get_status(self):
         """Get a status update.
 
-        This is a coroutine.
+        This is a coroutine that performs the status query and returns the
+        result.
 
         :return: :class:`Status` with the parsed fields
         """
