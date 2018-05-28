@@ -174,6 +174,10 @@ class HUT2(asyncio.DatagramProtocol):
         self.query()
         return await fut
 
+    async def ping(self):
+        await self.get_status()
+        return True
+
     def query(self):
         """Query device status and settings."""
         self.do(b"wer da?")
