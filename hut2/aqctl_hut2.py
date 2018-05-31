@@ -49,6 +49,8 @@ def main():
 
     try:
         loop.run_until_complete(run())
+    except KeyboardInterrupt:
+        pass
     finally:
         loop.close()
 
