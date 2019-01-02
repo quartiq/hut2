@@ -1,6 +1,10 @@
 Python and ARTIQ drivers for Anel HUT2 power distribution
 =========================================================
 
+.. image:: https://gitlab.com/quartiq/hut2/badges/master/pipeline.svg
+    :target: https://gitlab.com/quartiq/hut2/commits/master
+    :alt: CI/CD Pipeline Status
+
 .. image:: https://readthedocs.org/projects/hut2/badge/?version=latest
     :target: http://hut2.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
